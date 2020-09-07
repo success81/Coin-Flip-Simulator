@@ -1,0 +1,23 @@
+import random
+def coin_flip(number_flips):
+    working_list = []
+    main_list = []
+    main_dict = {}
+    choice = ["H","T"]
+    for x in range(number_flips):
+        working_list.append(random.choice(choice))
+    for x in working_list:
+        if x == "H":
+            if "H" not in main_dict:
+                main_dict["H"] = 0
+            if "H" in main_dict:
+                main_dict["H"] += 1
+        if x == "T":
+            if "T" not in main_dict:
+                main_dict["T"] = 0
+            if "T" in main_dict:
+                main_dict["T"] += 1
+    return (main_dict working_list)
+
+a = coin_flip(100)
+print (a)
